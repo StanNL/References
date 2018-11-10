@@ -1,0 +1,18 @@
+pre {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	word-break: break-word;
+    white-space: pre-wrap;
+}
+
+#res {
+	display: none;
+}
+
+body{
+	background: #03A9F4;
+	color: white;
+	padding: 36px;
+	overflow-x: hidden;
+}
