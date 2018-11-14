@@ -13,7 +13,7 @@ $(document).ready(function () {
 		dq = $("pre");
 		for (let i = 0; i < dq.length; i++) {
 			dq[i].addEventListener('click', function () {
-				res.innerHTML = this.innerHTML.replace(/ /g, '');
+				res.innerHTML = this.innerHTML;
 				M.toast({
 					html: "Code copied to clipboard!",
 					duration: 2500
