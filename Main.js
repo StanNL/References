@@ -1,7 +1,7 @@
 var items = {}
 
 $(document).ready(function () {
-	getJSON("Items.json", function(data){
+	$.getJSON("Items.json", function(data){
 		items = data;
 		
 		ks = Object.keys(items);
