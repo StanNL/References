@@ -3,7 +3,8 @@ pre {
 	margin: 0;
 	width: 100%;
 	word-break: break-word;
-    white-space: pre-wrap;
+	white-space: pre-wrap;
+	cursor: pointer;
 }
 
 #res {
