@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Quicksand:700,500|Roboto+Mono|Material+Icons);
-
 pre {
 	padding: 0;
 	margin: 0;
@@ -11,34 +10,52 @@ pre {
 	font-family: "Roboto Mono", monospace;
 }
 
-#title.dark{
+#title.dark {
 	color: #fafafa;
-	background: rgba(0,0,0,.2);
+	background: rgba(0, 0, 0, .2);
 }
 
-#subtitle.dark{
+#subtitle.dark {
 	color: #5d8094!important
 }
 
 #credits.dark {
-	background: rgba(0,0,0,.32);
+	background: rgba(0, 0, 0, .32);
 }
 
-body.dark{
+#smallscreen {
+	opacity: 0;
+	position: absolute;
+	transition-duration: 400ms;
+	margin-bottom: 0px;
+}
+
+#bigscreen {
+	opacity: 1;
+	transition-duration: 400ms;
+	position: absolute;
+	display: inline-block;
+}
+
+body.dark {
 	background: #002a36!important;
 }
 
-#themeSwitcher{
+#themeSwitcher {
+	background: rgba(0, 0, 0, .6);
+}
+
+#themeSwitcher {
 	position: absolute;
 	left: calc(100% - 16px);
 	border-radius: 50%;
-	background: rgba(0,0,0,.1);
+	background: rgba(0, 0, 0, .1);
 	padding: 8px;
 	cursor: pointer;
 	top: -30px;
 }
 
-#themeSwitcherDiv{
+#themeSwitcherDiv {
 	position: relative;
 	/* width: 0; */
 	height: 0;
@@ -189,9 +206,25 @@ h3 {
 		column-count: 4;
 		display: flex;
 	}
-	.item{'
-		width: 25%;
+	.item {
+		'
+ width: 25%;
 		padding-right: 15px;
 		padding-left: 15px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	#smallscreen {
+		opacity: 1;
+	}
+	#credits {
+		padding-bottom: 32px;
+	}
+	#themeSwitcher {
+		top: -21px;
+	}
+	#bigscreen {
+		opacity: 0;
 	}
 }
