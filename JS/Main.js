@@ -57,20 +57,26 @@ function loadTheme(){
 	let c = currentTheme;
 	if(c == 'light') {
 		$("*").removeClass("dark");
-		$("#logo").attr("src", "Images/icon.png");
+		ic = "Images/icon.png";
+		$("#favicon").attr("href", ic);
+		$("#logo").attr("src", ic);
 		$("#themeSwitcher").html("brightness_high");
+		$("#tc").attr("value", "#0287c3");
 	}else{
 		$("*").addClass("dark");
-		$("#logo").attr("src", "Images/icon_transparent.png");
+		ic = "Images/icon_transparent.png";
+		$("#favicon").attr("href", "Images/icon_dark.png");
+		$("#logo").attr("src", ic);
 		$("#themeSwitcher").html("brightness_low");
+		$("#tc").attr("value", "#00171e");
 	}
 }
 
-function getCurrentTheme(){
-	let d = new Date().getHours();
-	if(d > 19 || d < 7) return "dark";
-	return "light";
-}
+// function getCurrentTheme(){
+// 	let d = new Date().getHours();
+// 	if(d > 19 || d < 7) return "dark";
+// 	return "light";
+// }
 
 function toast(text, t) {
 	shownTime = t;
