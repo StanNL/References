@@ -41,6 +41,14 @@ body.dark {
 	background: #002a36!important;
 }
 
+#toastText.dark {
+	color: #fafafa;
+}
+
+#toast.dark {
+	background: #001419;
+}
+
 #themeSwitcher {
 	background: rgba(0, 0, 0, .6);
 }
@@ -139,7 +147,7 @@ h3 {
 	height: 60px;
 	opacity: 0;
 	transition-duration: 400ms;
-	color: white;
+	color: #333;
 	font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
@@ -150,7 +158,7 @@ h3 {
 #toast {
 	opacity: 0;
 	position: fixed;
-	background: #333;
+	background: #fafafa;
 	left: 50%;
 	bottom: -40px;
 	transition-duration: 400ms;

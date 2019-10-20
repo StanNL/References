@@ -7,10 +7,10 @@ var theme;
 var lastClick;
 
 $(document).ready(function () {
-	setTimeout(function(){
+	loadTheme();
+	setTimeout(function () {
 		$("*").css("transition-duration", '400ms');
 		theme = localStorage.getItem("RefTheme");
-		loadTheme();
 	}, 250);
 
 	setInterval(loadTheme, 10000);
@@ -35,34 +35,34 @@ $(document).ready(function () {
 		}
 	});
 
-	$("#themeSwitcher").click(function(){
-		// let themanaam;
+	$("#themeSwitcher").click(function () {
+		let themanaam;
 		let oldtheme = theme;
-		if(!oldtheme || oldtheme == 'light'){
-			// themanaam = 'Donker';
+		if (!oldtheme || oldtheme == 'light') {
+			themanaam = 'donker';
 			theme = 'dark';
 		}
-		if(oldtheme == 'dark'){
-			// themanaam = 'Licht';
+		if (oldtheme == 'dark') {
+			themanaam = 'licht';
 			theme = 'light';
 		}
 		localStorage.setItem("RefTheme", theme);
-		// toast("Thema is nu " + themanaam, 3250);
+		toast("Thema is nu " + themanaam, 3250);
 		loadTheme();
 	});
 });
 
-function loadTheme(){
+function loadTheme() {
 	let currentTheme = theme;
 	let c = currentTheme;
-	if(c == 'light') {
+	if (c == 'light') {
 		$("*").removeClass("dark");
 		ic = "Images/icon.png";
 		$("#favicon").attr("href", ic);
 		$("#logo").attr("src", ic);
 		$("#themeSwitcher").html("brightness_high");
 		$("#tc").attr("content", "#0287c3");
-	}else{
+	} else {
 		$("*").addClass("dark");
 		ic = "Images/icon_transparent.png";
 		$("#favicon").attr("href", "Images/icon_dark.png");
