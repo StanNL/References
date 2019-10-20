@@ -72,12 +72,6 @@ function loadTheme() {
 	}
 }
 
-// function getCurrentTheme(){
-// 	let d = new Date().getHours();
-// 	if(d > 19 || d < 7) return "dark";
-// 	return "light";
-// }
-
 function toast(text, t) {
 	shownTime = t;
 	lastClick = +new Date();

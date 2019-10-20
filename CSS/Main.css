@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald|Roboto|Quicksand:700,500|Roboto+Mono|Material+Icons);
+
 pre {
 	padding: 0;
 	margin: 0;
@@ -37,7 +38,7 @@ pre {
 	display: inline-block;
 }
 
-body.dark {
+body.dark, html.dark {
 	background: #002a36!important;
 }
 
