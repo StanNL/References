@@ -61,14 +61,14 @@ function loadTheme(){
 		$("#favicon").attr("href", ic);
 		$("#logo").attr("src", ic);
 		$("#themeSwitcher").html("brightness_high");
-		$("#tc").attr("value", "#0287c3");
+		$("#tc").attr("content", "#0287c3");
 	}else{
 		$("*").addClass("dark");
 		ic = "Images/icon_transparent.png";
 		$("#favicon").attr("href", "Images/icon_dark.png");
 		$("#logo").attr("src", ic);
 		$("#themeSwitcher").html("brightness_low");
-		$("#tc").attr("value", "#00171e");
+		$("#tc").attr("content", "#00171e");
 	}
 }
 
