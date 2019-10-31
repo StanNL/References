@@ -7,10 +7,10 @@ var theme;
 var lastClick;
 
 $(document).ready(function () {
-	loadTheme();
 	setTimeout(function () {
-		$("*").css("transition-duration", '400ms');
+		$("*:not(#subtitle)").css("transition-duration", '400ms');
 		theme = localStorage.getItem("RefTheme");
+		loadTheme();
 	}, 250);
 
 	setInterval(loadTheme, 10000);
